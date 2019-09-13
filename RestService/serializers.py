@@ -7,7 +7,7 @@ from rest_framework import serializers
 class ItemTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ItemType
-        fields = ['id', 'type']
+        fields = ['id', 'name']
 
 
 class PlayerSerializer(serializers.HyperlinkedModelSerializer):
