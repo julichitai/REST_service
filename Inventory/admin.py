@@ -3,7 +3,7 @@ from Inventory.models import ItemType, Item
 
 
 class ItemTypeAdmin(admin.ModelAdmin):
-    list_display = ('type',)
+    list_display = ('name',)
 
 
 class ItemAdmin(admin.ModelAdmin):

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'GameMap.apps.GamemapConfig',
     'Player.apps.PlayerConfig',
     'Inventory.apps.InventoryConfig',
+    'Message.apps.MessageConfig',
     'rest_framework'
 ]
 
@@ -125,8 +126,13 @@ STATIC_URL = '/static/'
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ],
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
     'PAGINATE_BY': 10
 }
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ],
+#     'PAGINATE_BY': 10
+# }

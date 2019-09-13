@@ -4,10 +4,10 @@ from Player.models import Player
 
 
 class ItemType(models.Model):
-    type = models.CharField(max_length=40, unique=True)
+    name = models.CharField(max_length=40, unique=True)
 
     def __unicode__(self):
-        return self.type
+        return self.name
 
 
 class Item(models.Model):
