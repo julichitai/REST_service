@@ -27,6 +27,7 @@ router.register(r'inventory', views.ItemTypeList)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inventory/', include('Inventory.urls')),
-    url(r'^', include(router.urls))
+    url(r'^', include(router.urls)),
+    url(r'^accounts/', include('django.contrib.auth.urls'))
     # url(r'^api-auth/', include('rest-framework.urls', namespace='rest-framework'))
 ]
